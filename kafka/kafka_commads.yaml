@@ -1,0 +1,10 @@
+kafka-topics --bootstrap-server=localhost:9092 --list
+kafka-topics --create --topic analytical_bookings --partitions 100 --bootstrap-server=localhost:9092
+kafka-topics --create --topic analytical_bookings_acknowledgement --partitions 100 --bootstrap-server=localhost:9092
+kafka-topics --delete --topic analytical_bookings --bootstrap-server=localhost:9092
+kafka-topics --delete --topic analytical_bookings_acknowledgement --bootstrap-server=localhost:9092
+
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic corebanking.core.transaction
+
+KOWL:
+sudo docker run --network=host -p 8080:8080 -e KAFKA_BROKERS=localhost:29092 quay.io/cloudhut/kowl:master

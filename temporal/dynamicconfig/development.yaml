@@ -1,0 +1,7 @@
+global:
+  membership:
+    broadcastAddress: "127.0.0.1"
+  metrics:
+    prometheus:
+      framework: "opentelemetry"
+      listenAddress: "127.0.0.1:8000"

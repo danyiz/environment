@@ -1,0 +1,94 @@
+{
+    "BalanceBuckets":[
+      {
+        "BucketName":"BOOKED_BALANCE",
+        "BucketItems":
+        [
+          {"BOOKED_BALANCE":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"VALUE_BALANCE",
+        "BucketItems":
+        [
+          {"VALUE_BALANCE":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },  
+      {
+        "BucketName":"OUTSTANDING_PRINCIPAL",
+        "BucketItems":
+        [
+          {"OUTSTANDING_PRINCIPAL":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"CAPITALIZED_PRINCIPAL",
+        "BucketItems":
+        [
+         {"CAPITALIZED_INTEREST":1},
+         {"CAPITALIZED_FEE":1},
+         {"CAPITALIZED_PENALTY_INTEREST":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"DUE_PRINCIPAL",
+        "BucketItems":
+        [
+          {"DUE_PRINCIPAL":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"INTEREST",
+        "BucketItems":
+        [ 
+          {"DUE_INTEREST":1},
+          {"BOUGHT_INTEREST":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"PENALTY_INTEREST_ON_PRINCIPAL",
+        "BucketItems":
+        [
+          {"DUE_PENALTY_ON_PRINCIPAL":1},
+          {"BOUGHT_DUE_PENALTY_ON_PRINCIPAL":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {
+        "BucketName":"PENALTY_INTEREST_ON_INTEREST",
+        "BucketItems":
+        [
+         {"DUE_PENALTY_ON_INTEREST":1},
+         {"BOUGHT_DUE_PENALTY_ON_INTEREST":1}
+        ],
+        "Restriction":["NEGATIVE"]
+      },
+      {  
+        "BucketName":"REPAYMENT",
+        "BucketItems":
+        [
+         { "CREDIT_BALANCE":1},
+         { "CREDIT_REFUND":1},
+         { "CREDIT_ADJUSTMENT_INTERST":1},
+         { "CREDIT_ADJUSTMENT_FEE":1},
+         { "CREDIT_ADJUSTMENT_PENALTY":1}
+        ],
+        "Restriction":["POSITIVE"]
+      },
+      {  
+        "BucketName":"SUBSIDIZED_INTEREST",
+        "BucketItems":
+        [
+         { "AUX_SUBSIDIZED_INTEREST_":1},
+         { "LETTER_SUBSIDIZED_INTEREST_":1}
+        ],
+        "Restriction":["POSITIVE"]
+      }
+    ]
+  }
